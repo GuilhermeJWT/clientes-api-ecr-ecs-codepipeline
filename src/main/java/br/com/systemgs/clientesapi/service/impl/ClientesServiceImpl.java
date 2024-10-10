@@ -4,7 +4,6 @@ import br.com.systemgs.clientesapi.exception.erros.ClienteNaoEncontradoException
 import br.com.systemgs.clientesapi.model.ModelClientes;
 import br.com.systemgs.clientesapi.repository.ClienteRepository;
 import br.com.systemgs.clientesapi.service.ClientesService;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +15,7 @@ public class ClientesServiceImpl implements ClientesService {
     private final ClienteRepository clienteRepository;
 
     @Autowired
-    public ClientesServiceImpl(ClienteRepository clienteRepository, ModelMapper mapper) {
+    public ClientesServiceImpl(ClienteRepository clienteRepository) {
         this.clienteRepository = clienteRepository;
     }
 
