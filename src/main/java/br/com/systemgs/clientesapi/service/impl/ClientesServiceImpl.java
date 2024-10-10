@@ -1,6 +1,5 @@
 package br.com.systemgs.clientesapi.service.impl;
 
-import br.com.systemgs.clientesapi.dto.ModelClientesDTO;
 import br.com.systemgs.clientesapi.exception.erros.ClienteNaoEncontradoException;
 import br.com.systemgs.clientesapi.model.ModelClientes;
 import br.com.systemgs.clientesapi.repository.ClienteRepository;
@@ -15,12 +14,10 @@ import java.util.List;
 public class ClientesServiceImpl implements ClientesService {
 
     private final ClienteRepository clienteRepository;
-    private final ModelMapper mapper;
 
     @Autowired
     public ClientesServiceImpl(ClienteRepository clienteRepository, ModelMapper mapper) {
         this.clienteRepository = clienteRepository;
-        this.mapper = mapper;
     }
 
     @Override
@@ -34,8 +31,8 @@ public class ClientesServiceImpl implements ClientesService {
     }
 
     @Override
-    public ModelClientes salvarClientes(ModelClientesDTO modelClientesDTO) {
-        return clienteRepository.save(mapper.map(modelClientesDTO, ModelClientes.class));
+    public ModelClientes salvarClientes(ModelClientes modelClientes) {
+        return clienteRepository.save(modelClientes);
     }
 
     @Override
