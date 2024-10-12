@@ -3,7 +3,6 @@ package br.com.systemgs.clientesapi.controller;
 import br.com.systemgs.clientesapi.model.ModelClientes;
 import br.com.systemgs.clientesapi.service.ClientesService;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -17,7 +16,6 @@ public class ClienteController {
 
     private final ClientesService clientesService;
 
-    @Autowired
     public ClienteController(ClientesService clientesService) {
         this.clientesService = clientesService;
     }
