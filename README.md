@@ -1,7 +1,7 @@
 <H2>Pipeline CI/CD - AWS: ECR, ECS, Code Build, Deploy e Pipeline</H2>
 <p>Criação de um fluxo de entrega continua e deploy continuo, utilizando Spring Boot e AWS.</p>
 <p>Principal objetivo do projeto foi criar um processo de entrega da imagem do projeto, configurando o arquivo <strong>buildspec.yml</strong> para montar o ambiente de execução no AWS CodeBuild e ECR, após as configurações o processo de entrega começa com a execução do CodePipeline para unir todas as etapas e realizar o deploy da nova imagem(docker) do projeto, diretamente no ECS, gerando uma <strong>Task Definition</strong> para novas versões da imagem.</p>
-<h2>Pipeline do Projeto</h2>
+<h2>Pipeline do Projeto:</h2>
 <img src="https://github.com/user-attachments/assets/1331f3ea-0b17-45ba-83ce-7dcca9555211"/>
 <h2>Passos para a criação de todo o fluxo:</h2>
 <ol>
@@ -19,4 +19,5 @@
     <li>Criar um processo de CI/CD no CodePipeline, difinindo a branch</li>
     <li>Configurar para realizar do deploy no ECS</li>
     <li>Executar o CodePipeline, será executado automaticamente para cada push na branch selecionada</li>
+    <li>Tutorial: https://www.youtube.com/watch?v=ARGmrYFfv44&t=126s</li>
 </ol>
